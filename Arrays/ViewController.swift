@@ -38,33 +38,81 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // arrayLearning()
-        
-        var arrayOfAges = [firstChildAge, secondChildAge]
+
+        // var arrayOfAges = [5, 6]
         // print(arrayOfAges)
         
-        print(arrayOfAges.count)
+        // print(arrayOfAges.count)
         
         // Give me the element at Index 5
         // If the index does not exist, the app will crash - `Fatal Error`
         // print(arrayOfAges[5])
         
         // Appends/ Adds an elements othe array
-        arrayOfAges.append(10)
+        // arrayOfAges.append(10)
+        // [5, 6, 10]
+        // [0, 1, 2]
         
-        print(arrayOfAges)
+        // print(arrayOfAges)
         // Remove an element from an array at a specific Index
         // arrayOfAges.remove(at: 6)
+
         
-        
-        
-        print(arrayOfAges)
+        // print(arrayOfAges)
         // print(arrayOfAges.count)
         
         
-        /// Array A:
-        ///
+        
+        var ndaloAge = 40
+        var melo = 90
+
+        // false ||
+        if ndaloAge > 40 || melo > 12 { // || or
+            print("Old man")
+        } else if ndaloAge < 40 && melo != 100 { // && and    != not equal to
+            print("Baby Boy") // true
+        } else {
+            print("Baby") // true
+        }
+        
+        
+        /// - `isRaining` is a name
+        /// `false` is a value
+        var isRaining = false
+        
+        // compating variable called `isRaining` to the value called `true`
+        if isRaining == true {
+            print("Wear Jacket")
+        } else {
+            
+        }
+        
+        let loggedInUser = ""
+        
+        // Make the carPrice 20000 and prevent it from being changed
+        var carPrice = 20000
+        
+        // is carPrice equal to 40000
+        if carPrice == 30000 {
+            print("Buy It")
+        }
+        
+        // Change CarPrice to 30k
+        carPrice = 30000
+        
+        if carPrice == 30000 {
+            print("Buy It")
+        }
+        
+        if 5 == 9 {
+            print("Equal value.... ")
+        }
         
         view.backgroundColor = .red
+    }
+    
+    func run() {
+        
     }
     
     func arrayLearning() {
@@ -96,6 +144,8 @@ class ViewController: UIViewController {
         // Update an Array's Elements
         arrayOfChildrenNames[0] = "Asanda"
         print(arrayOfChildrenNames)
+        
+        print(arrayOfChildrenNames[0])
     }
 
 

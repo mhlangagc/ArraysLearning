@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45D507952A112B5000E3F3F4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507942A112B5000E3F3F4 /* AccountViewController.swift */; };
+		45D507972A112C8200E3F3F4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507962A112C8200E3F3F4 /* AccountTableViewCell.swift */; };
+		45D5079A2A11324000E3F3F4 /* SecurityNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */; };
+		45D5079C2A1136B900E3F3F4 /* TwoStepVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5079B2A1136B900E3F3F4 /* TwoStepVerificationViewController.swift */; };
+		45D5079E2A11384C00E3F3F4 /* ChangeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D5079D2A11384C00E3F3F4 /* ChangeNumberViewController.swift */; };
 		45E5D2D329CD986800B94ED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5D2D229CD986800B94ED2 /* AppDelegate.swift */; };
 		45E5D2D529CD986800B94ED2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5D2D429CD986800B94ED2 /* SceneDelegate.swift */; };
 		45E5D2D729CD986800B94ED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5D2D629CD986800B94ED2 /* ViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45D507942A112B5000E3F3F4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		45D507962A112C8200E3F3F4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityNotificationsViewController.swift; sourceTree = "<group>"; };
+		45D5079B2A1136B900E3F3F4 /* TwoStepVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoStepVerificationViewController.swift; sourceTree = "<group>"; };
+		45D5079D2A11384C00E3F3F4 /* ChangeNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNumberViewController.swift; sourceTree = "<group>"; };
 		45E5D2CF29CD986800B94ED2 /* Arrays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arrays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E5D2D229CD986800B94ED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E5D2D429CD986800B94ED2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45D507982A11311000E3F3F4 /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				45D507942A112B5000E3F3F4 /* AccountViewController.swift */,
+				45D507962A112C8200E3F3F4 /* AccountTableViewCell.swift */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
 		45E5D2C629CD986800B94ED2 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +78,10 @@
 				45E5D2D229CD986800B94ED2 /* AppDelegate.swift */,
 				45E5D2D429CD986800B94ED2 /* SceneDelegate.swift */,
 				45E5D2D629CD986800B94ED2 /* ViewController.swift */,
+				45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */,
+				45D5079B2A1136B900E3F3F4 /* TwoStepVerificationViewController.swift */,
+				45D5079D2A11384C00E3F3F4 /* ChangeNumberViewController.swift */,
+				45D507982A11311000E3F3F4 /* AccountViewController */,
 				45E5D2D829CD986800B94ED2 /* Main.storyboard */,
 				45E5D2DB29CD986A00B94ED2 /* Assets.xcassets */,
 				45E5D2DD29CD986A00B94ED2 /* LaunchScreen.storyboard */,
@@ -140,7 +163,12 @@
 			files = (
 				45E5D2D729CD986800B94ED2 /* ViewController.swift in Sources */,
 				45E5D2D329CD986800B94ED2 /* AppDelegate.swift in Sources */,
+				45D5079E2A11384C00E3F3F4 /* ChangeNumberViewController.swift in Sources */,
+				45D507952A112B5000E3F3F4 /* AccountViewController.swift in Sources */,
+				45D5079A2A11324000E3F3F4 /* SecurityNotificationsViewController.swift in Sources */,
+				45D507972A112C8200E3F3F4 /* AccountTableViewCell.swift in Sources */,
 				45E5D2D529CD986800B94ED2 /* SceneDelegate.swift in Sources */,
+				45D5079C2A1136B900E3F3F4 /* TwoStepVerificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
