@@ -7,6 +7,7 @@
 
 import UIKit
 
+/*
 class ViewController: UIViewController {
 
     // Type - same as saying the Identity of something.
@@ -150,4 +151,5 @@ class ViewController: UIViewController {
 
 
 }
+*/
 

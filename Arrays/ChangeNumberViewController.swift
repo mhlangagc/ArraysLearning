@@ -3,11 +3,32 @@ import UIKit
 
 class ChangeNumberViewController: UIViewController {
     
+    // var arrayOfFruits: [String] = [] // Empty Array of Type String.
+    
+    var phoneNumber = ""
+    
+    lazy var phoneNumberLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         title = "Change Number"
         addCloseButton()
+        setupLabel()
+        phoneNumberLabel.text = phoneNumber
+        
+    }
+    
+    func setupLabel() {
+        view.addSubview(phoneNumberLabel)
+        phoneNumberLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        phoneNumberLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     func addCloseButton() {
