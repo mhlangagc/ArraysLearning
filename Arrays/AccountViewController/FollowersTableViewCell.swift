@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendsTableViewCell: UITableViewCell {
+class FollowersTableViewCell: UITableViewCell {
     
     lazy var friendImageView: UIImageView = {
         let imageView = UIImageView()
