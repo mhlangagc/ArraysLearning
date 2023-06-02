@@ -11,9 +11,11 @@ import UIKit
 
 class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // TODO: Empty Array of Emails
+    var messagesArray: [Message] = []
+    
     private lazy var messagesTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.backgroundColor = .red
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
@@ -24,15 +26,15 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        title = "Simphiwe"
+        title = ""
         setupUI()
         registerCells()
     }
     
     
     func registerCells() {
-        messagesTableView.register(TweetsTableViewCell.self,
-                                  forCellReuseIdentifier: "TweetsTableViewCellID")
+        messagesTableView.register(MessageTableViewCell.self,
+                                  forCellReuseIdentifier: "MessageTableViewCellID")
     }
 
     func setupUI() {
@@ -48,17 +50,22 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return messagesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tweetsCell = tableView.dequeueReusableCell(withIdentifier: "TweetsTableViewCellID", for: indexPath) as! TweetsTableViewCell
-//        tweetsCell.profileNameLabel.text = profile
-//        tweetsCell.tweetsLabel.text = tweetsArray[indexPath.row]
-        return tweetsCell
+        let messageCell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCellID", for: indexPath) as! MessageTableViewCell
+        messageCell.senderLabel.text = messagesArray[indexPath.row].sender
+        messageCell.messageLabel.text = messagesArray[indexPath.row].message
+        return messageCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/*
 class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var profile = "" // Empty String
@@ -96,3 +97,4 @@ class TweetViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return UITableView.automaticDimension
     }
 }
+*/

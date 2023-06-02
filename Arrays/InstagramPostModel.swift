@@ -20,4 +20,11 @@ struct InstagramPost {
     var timeStamp: Date
     var isInstagramSuggested: Bool
     var numberOfTweets: [Tweet]
+    var comments: [Comment]
+}
+
+struct Comment {
+    var name: String
+    var time: Date
+    var comment: String
 }

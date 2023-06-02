@@ -8,40 +8,13 @@
 import Foundation
 import UIKit
 
-
-
 class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var chatsArray = [ChatModel(senderName: "Lerato",
-                                receiverName: "Gugulethu",
-                                lastMessage: "No worry bro. 😎",
-                                lastMessageTimeStamp: "07:45",
-                                senderImage: UIImage(named: "lerato")!,
-                                receiverImage: UIImage(),
-                                isGroupChat: false,
-                                isPaidGroup: false),
-                      
-                      ChatModel(senderName: "Maboni",
-                                receiverName: "Gugulethu",
-                                lastMessage: "Did you get started with your idea?",
-                                lastMessageTimeStamp: "10:53",
-                                senderImage: UIImage(named: "maboni")!,
-                                receiverImage: UIImage(),
-                                isGroupChat: true,
-                                isPaidGroup: true),
-                      
-                      ChatModel(senderName: "Sibonile",
-                                receiverName: "Gugulethu",
-                                lastMessage: "I also want to pay you in advance. Can I put the down payment for $330 today then the rest when we complete the project.",
-                                lastMessageTimeStamp: "12:19",
-                                senderImage: UIImage(), // the group didn't add a profile picture
-                                receiverImage: UIImage(),
-                                isGroupChat: true,
-                                isPaidGroup: false)]
-    
+        
+    // TODO: User this as a way to point to the MailsDatabase
+    let chatsDatabase = ChatsDatabase()
     
     lazy var chatsTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +25,26 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         setupUI()
         registerCells()
-        title = "Chats"
+        title = "To Do"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
+    }
+    
+    @objc func handleAdd() {
+        
+        let newChat =  ChatModel(senderName: "Ndalo",
+                                 receiverName: "Gugulethu",
+                                 lastMessage: "I also want to pay you in advance. Can I put the down payment for $330 today then the rest when we complete the project.",
+                                 lastMessageTimeStamp: "12:19",
+                                 senderImage: UIImage(), // the group didn't add a profile picture
+                                 receiverImage: UIImage(),
+                                 isGroupChat: true,
+                                 isPaidGroup: false,
+                                 messages: [])
+        
+        chatsDatabase.chatsArray.append(newChat)
+        chatsTableView.reloadData() // reload the screen when new data is available
+        
+        // Run a function to store on internet
     }
     
     func setupUI() {
@@ -73,22 +65,13 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatsArray.count
+        return chatsDatabase.chatsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCellID", for: indexPath) as! ChatsTableViewCell
         
-        let chat = chatsArray[indexPath.row]
-        
-        /*
-        let chat = ChatModel(senderName: "Simphiwe",
-                             receiverName: "Gugulethu",
-                             lastMessage: "How do these cellForRows really work?",
-                             lastMessageTimeStamp: "16:37",
-                             senderImage: UIImage(named: "thato")!,
-                             receiverImage: UIImage())
-        */
+        let chat = chatsDatabase.chatsArray[indexPath.row]
         
         chatsTableViewCell.nameLabel.text = chat.senderName
         chatsTableViewCell.recentMessageLabel.text = chat.lastMessage
@@ -119,8 +102,9 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let chat = chatsDatabase.chatsArray[indexPath.row]
         let messageViewController = MessagesViewController()
-        // tweetsViewController.profile = followersArray[indexPath.row]
+        messageViewController.messagesArray = chat.messages
         self.navigationController?.pushViewController(messageViewController, animated: true)
     }
     

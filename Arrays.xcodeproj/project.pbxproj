@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		453EF60F2A25281500397A79 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF60E2A25281500397A79 /* ChatModel.swift */; };
 		453EF6122A25334400397A79 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6112A25334400397A79 /* MessagesViewController.swift */; };
-		453EF6142A25354C00397A79 /* Mailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6132A25354C00397A79 /* Mailbox.swift */; };
 		453EF6162A25384C00397A79 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6152A25384C00397A79 /* TweetModel.swift */; };
 		453EF6182A253A4100397A79 /* InstagramPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6172A253A4100397A79 /* InstagramPostModel.swift */; };
 		453EF61A2A253C0900397A79 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EF6192A253C0900397A79 /* AppModel.swift */; };
+		45BADCFD2A2A2B3900F2CABD /* MailBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BADCFC2A2A2B3900F2CABD /* MailBox.swift */; };
+		45BADCFF2A2A429A00F2CABD /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BADCFE2A2A429A00F2CABD /* MessageModel.swift */; };
+		45BADD012A2A42B600F2CABD /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BADD002A2A42B600F2CABD /* Chats.swift */; };
 		45D507952A112B5000E3F3F4 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507942A112B5000E3F3F4 /* ChatsViewController.swift */; };
 		45D507972A112C8200E3F3F4 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507962A112C8200E3F3F4 /* ChatsTableViewCell.swift */; };
 		45D5079A2A11324000E3F3F4 /* SecurityNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */; };
@@ -30,10 +32,12 @@
 /* Begin PBXFileReference section */
 		453EF60E2A25281500397A79 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		453EF6112A25334400397A79 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		453EF6132A25354C00397A79 /* Mailbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailbox.swift; sourceTree = "<group>"; };
 		453EF6152A25384C00397A79 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
 		453EF6172A253A4100397A79 /* InstagramPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramPostModel.swift; sourceTree = "<group>"; };
 		453EF6192A253C0900397A79 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		45BADCFC2A2A2B3900F2CABD /* MailBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailBox.swift; sourceTree = "<group>"; };
+		45BADCFE2A2A429A00F2CABD /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		45BADD002A2A42B600F2CABD /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		45D507942A112B5000E3F3F4 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		45D507962A112C8200E3F3F4 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
 		45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityNotificationsViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				453EF6112A25334400397A79 /* MessagesViewController.swift */,
-				453EF6132A25354C00397A79 /* Mailbox.swift */,
+				45E835FD2A1CF814008C7F64 /* TweetsTableViewCell.swift */,
 			);
 			path = MessagesViewController;
 			sourceTree = "<group>";
@@ -73,8 +77,10 @@
 		45D507982A11311000E3F3F4 /* ChatsViewControler */ = {
 			isa = PBXGroup;
 			children = (
-				45D507942A112B5000E3F3F4 /* ChatsViewController.swift */,
 				453EF60E2A25281500397A79 /* ChatModel.swift */,
+				45BADCFE2A2A429A00F2CABD /* MessageModel.swift */,
+				45BADD002A2A42B600F2CABD /* Chats.swift */,
+				45D507942A112B5000E3F3F4 /* ChatsViewController.swift */,
 				45D507962A112C8200E3F3F4 /* ChatsTableViewCell.swift */,
 			);
 			path = ChatsViewControler;
@@ -108,10 +114,11 @@
 				45D507992A11324000E3F3F4 /* SecurityNotificationsViewController.swift */,
 				45D5079D2A11384C00E3F3F4 /* ChangeNumberViewController.swift */,
 				453EF6152A25384C00397A79 /* TweetModel.swift */,
+				45BADCFC2A2A2B3900F2CABD /* MailBox.swift */,
 				453EF6172A253A4100397A79 /* InstagramPostModel.swift */,
 				453EF6192A253C0900397A79 /* AppModel.swift */,
-				453EF6102A25332F00397A79 /* MessagesViewController */,
 				45D507982A11311000E3F3F4 /* ChatsViewControler */,
+				453EF6102A25332F00397A79 /* MessagesViewController */,
 				45E835FC2A1CF73A008C7F64 /* Tweets */,
 				45E5D2E029CD986A00B94ED2 /* Info.plist */,
 			);
@@ -122,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				45D5079B2A1136B900E3F3F4 /* TweetViewController.swift */,
-				45E835FD2A1CF814008C7F64 /* TweetsTableViewCell.swift */,
 			);
 			path = Tweets;
 			sourceTree = "<group>";
@@ -202,17 +208,19 @@
 				45E5D2D329CD986800B94ED2 /* AppDelegate.swift in Sources */,
 				45D5079E2A11384C00E3F3F4 /* ChangeNumberViewController.swift in Sources */,
 				45D507952A112B5000E3F3F4 /* ChatsViewController.swift in Sources */,
-				453EF6142A25354C00397A79 /* Mailbox.swift in Sources */,
+				45BADCFD2A2A2B3900F2CABD /* MailBox.swift in Sources */,
 				45D5079A2A11324000E3F3F4 /* SecurityNotificationsViewController.swift in Sources */,
 				453EF60F2A25281500397A79 /* ChatModel.swift in Sources */,
 				45D507972A112C8200E3F3F4 /* ChatsTableViewCell.swift in Sources */,
 				453EF6122A25334400397A79 /* MessagesViewController.swift in Sources */,
+				45BADCFF2A2A429A00F2CABD /* MessageModel.swift in Sources */,
 				45E835FE2A1CF814008C7F64 /* TweetsTableViewCell.swift in Sources */,
 				453EF6182A253A4100397A79 /* InstagramPostModel.swift in Sources */,
 				45E5D2D529CD986800B94ED2 /* SceneDelegate.swift in Sources */,
 				45D5079C2A1136B900E3F3F4 /* TweetViewController.swift in Sources */,
 				453EF61A2A253C0900397A79 /* AppModel.swift in Sources */,
 				453EF6162A25384C00397A79 /* TweetModel.swift in Sources */,
+				45BADD012A2A42B600F2CABD /* Chats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
